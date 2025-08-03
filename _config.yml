@@ -5,9 +5,9 @@ description: > # this means to ignore newlines until "twitter_username:"
   Тут будет портфолио, но пока что я его не сделал.
 
 # social links
-twitter_username: jekyllrb
-github_username:  jekyll
-rss: rss
+telegram_username: >
+  @MishaNyaIsTaken
+
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
@@ -25,5 +25,5 @@ minima:
 theme: minima
 
 plugins:
- - jekyll-feed
+ 
  - jekyll-seo-tag
