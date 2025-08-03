@@ -2,5 +2,6 @@
 theme: minima
 minima:
   skin: dark
-title: MishaNyaCopilot.github.io
-description: Bookmark this to keep an eye on my project updates!
+title: MishaNyaCopilot's Projects
+plugins:
+  - jekyll-feed
