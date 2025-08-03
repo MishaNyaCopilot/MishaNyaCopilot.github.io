@@ -1,12 +1,13 @@
-title: Portfolio
+title: My portfolio
 author: MishaNyaCopilot
 email: kholodm07@gmail.com
 description: > # this means to ignore newlines until "twitter_username:"
-  Тут будет портфолио, но пока что его нет.
+  Тут будет портфолио, но пока что я его не сделал.
 
 # social links
-telegram: >
-  @MishaNyaIsTaken
+twitter_username: jekyllrb
+github_username:  jekyll
+rss: rss
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
