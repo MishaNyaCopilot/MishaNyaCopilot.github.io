@@ -5,7 +5,8 @@ description: > # this means to ignore newlines until "twitter_username:"
   Тут будет портфолио, но пока что его нет.
 
 # social links
-telegram: @MishaNyaIsTaken
+telegram: >
+  @MishaNyaIsTaken
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
