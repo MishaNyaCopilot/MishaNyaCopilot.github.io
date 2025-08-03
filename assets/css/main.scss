@@ -2,3 +2,26 @@
 ---
 
 @import "minima";
+
+body {
+  background-color: #282c34;
+  color: #abb2bf;
+}
+
+a {
+  color: #61afef;
+}
+
+.site-header {
+  background-color: #21252b;
+  border-bottom: 1px solid #181a1f;
+}
+
+.site-title,
+.site-title:visited {
+  color: #abb2bf;
+}
+
+.site-nav .page-link {
+  color: #abb2bf;
+}
