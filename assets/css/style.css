@@ -1,0 +1,230 @@
+:root {
+  --bg: #0b0d12;
+  --elev: #11151d;
+  --text: #e6edf3;
+  --muted: #9aa5b1;
+  --primary: #6aa9ff;
+  --accent: #7ee787;
+  --border: #1f2632;
+  --radius: 12px;
+  --shadow: 0 6px 20px rgba(0,0,0,0.2);
+
+  /* Background animation palette */
+  --bg-grad-1: #0b0d12;
+  --bg-grad-2: #0f1522;
+  --bg-grad-3: #0c1220;
+
+  --orb-1: rgba(106,169,255,0.18);
+  --orb-2: rgba(126,231,135,0.16);
+  --orb-3: rgba(255,119,119,0.10);
+}
+
+* { box-sizing: border-box; }
+
+/* Reset page background to transparent so pseudo-layers show through */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: transparent !important;
+  color: var(--text);
+  font-family: ui-sans-serif, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji';
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100%;
+}
+body {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ===================== Animated Background (Canvas Layer) ===================== */
+/* Use a fixed, full-viewport background container behind everything */
+.bg-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;                 /* sits behind main content (which will be z-index:1) */
+  pointer-events: none;       /* ignore mouse */
+  overflow: hidden;
+}
+
+/* Layer 1: slow gradient shift */
+.bg-canvas::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(1200px 800px at 20% 20%, var(--bg-grad-2) 0%, transparent 60%),
+    radial-gradient(1000px 700px at 80% 30%, var(--bg-grad-3) 0%, transparent 55%),
+    radial-gradient(900px 700px at 40% 85%, var(--bg-grad-2) 0%, transparent 60%),
+    linear-gradient(140deg, var(--bg-grad-1), var(--bg-grad-2), var(--bg-grad-3));
+  background-size: 160% 160%;
+  animation: bgShift 28s ease-in-out infinite alternate;
+}
+
+/* Layer 2: floating soft orbs */
+.bg-canvas::after {
+  content: "";
+  position: absolute;
+  inset: -10vmax;
+  background:
+    radial-gradient(40vmax 40vmax at 15% 25%, var(--orb-1) 0%, rgba(0,0,0,0) 60%),
+    radial-gradient(36vmax 36vmax at 85% 20%, var(--orb-2) 0%, rgba(0,0,0,0) 65%),
+    radial-gradient(32vmax 32vmax at 40% 90%, var(--orb-3) 0%, rgba(0,0,0,0) 70%);
+  filter: blur(22px) saturate(110%);
+  animation: orbsDrift 20s ease-in-out infinite alternate;
+}
+
+/* Optional grid overlay */
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  z-index: 0; /* same as canvas, appears behind content */
+  pointer-events: none;
+  opacity: 0.06;
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: gridShift 30s linear infinite;
+}
+
+/* Keyframes for background */
+@keyframes bgShift {
+  0% { background-position: 0% 0%, 100% 0%, 50% 100%, 0% 0%; }
+  50% { background-position: 50% 40%, 70% 20%, 30% 80%, 50% 50%; }
+  100% { background-position: 100% 100%, 0% 100%, 70% 0%, 100% 100%; }
+}
+@keyframes orbsDrift {
+  0%   { transform: translate3d(0,0,0) scale(1); }
+  50%  { transform: translate3d(1.5vmax,-1vmax,0) scale(1.02); }
+  100% { transform: translate3d(-1vmax,1.2vmax,0) scale(0.99); }
+}
+@keyframes gridShift {
+  0% { background-position: 0 0, 0 0; }
+  100% { background-position: 40px 40px, 40px 40px; }
+}
+
+/* Reduced motion guard */
+@media (prefers-reduced-motion: reduce) {
+  .bg-canvas, .bg-grid,
+  .bg-canvas::before, .bg-canvas::after { animation: none !important; }
+}
+
+/* ===================== Main Layout & Components ===================== */
+
+/* Raise the app shell above the background canvas */
+.site-header, main, .container, .site-footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Translucent panels so background remains visible */
+/* Keep most surfaces transparent; only selected panels get translucency */
+.container { /* wrapper only, no background to let canvas show */ }
+.hero,
+.project-header {
+  background-color: rgba(17, 21, 29, 0.52); /* subtle translucency on key panels */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.card { background: rgba(17, 21, 29, 0.40); border: 1px solid var(--border); }
+.site-header,
+.site-footer {
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-color: transparent;
+}
+
+/* Layout */
+.container { width: min(1100px, 92vw); margin: 2rem auto 3rem; } /* reduce bottom margin so footer is not offscreen on home */
+body { min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1 0 auto; position: relative; z-index: 1; }
+.site-footer { flex-shrink: 0; position: relative; z-index: 1; }
+
+/* Home hero-specific spacing to avoid excess vertical push on small screens */
+.home .hero { padding-bottom: 2rem; }
+
+.site-header { position: sticky; top: 0; z-index: 2; border-bottom: 1px solid transparent; display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 1rem; background: transparent; }
+.brand { font-weight: 700; color: var(--text); }
+.nav a { margin: 0 0.5rem; padding: 0.5rem 0.75rem; border-radius: 8px; color: var(--text); }
+.nav a.active, .nav a:hover { background: rgba(255,255,255,0.06); }
+
+.site-footer { border-top: 1px solid transparent; margin-top: 4rem; padding: 2rem 1rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; color: var(--muted); background: transparent; }
+.site-footer a { color: var(--text); }
+
+/* Links styling: remove default underlines globally; show underline only on focus for accessibility */
+a { text-decoration: none; color: var(--primary); }
+a:hover { text-decoration: none; }
+a:focus-visible { outline: 2px solid #3c69ff; outline-offset: 2px; text-decoration: underline; }
+
+/* Entrance animations for content */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+main .container, main, section, article, .grid, .project-header, .gallery, .links {
+  animation: fadeUp 400ms ease-out both;
+}
+
+/* Cards */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; margin-top: 1rem; }
+.card { display: block; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease; will-change: transform; }
+.card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: #2a3344; }
+.card img { display: block; width: 100%; height: 160px; object-fit: cover; background: #0b0d12; transition: transform 200ms ease; }
+.card:hover img { transform: scale(1.03); }
+.card-content { padding: 0.9rem; }
+.card-content h3 { margin: 0 0 0.25rem; font-size: 1.05rem; }
+.card-content p { margin: 0 0 0.5rem; color: var(--muted); }
+.meta { display: flex; gap: 0.5rem; flex-wrap: wrap; color: var(--muted); font-size: 0.85rem; }
+
+/* Hero */
+.hero { padding: 3rem 1rem; text-align: center; border: 1px solid var(--border); border-radius: var(--radius); background-color: rgba(17, 21, 29, 0.52); }
+.hero h1 { margin: 0 0 0.5rem; font-size: clamp(2rem, 3.2vw, 3rem); letter-spacing: -0.02em; }
+.hero p { color: var(--muted); margin: 0 auto 1rem; max-width: 60ch; }
+.cta { display: inline-flex; gap: 0.75rem; margin-top: 1rem; }
+.button { background: var(--primary); color: #0b0d12; padding: 0.56rem 0.9rem; border-radius: 10px; font-weight: 700; box-shadow: var(--shadow); transition: transform 140ms ease, box-shadow 140ms ease; }
+.button:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,0.26); }
+.button.secondary { background: rgba(255,255,255,0.04); color: var(--text); border: 1px solid var(--border); box-shadow: none; }
+.button.secondary:hover { transform: translateY(-2px); }
+
+/* Project header chips */
+.project-header { padding: 1.25rem; border: 1px solid var(--border); border-radius: var(--radius); background-color: rgba(17, 21, 29, 0.52); }
+.subtitle { color: var(--muted); margin-top: -0.25rem; }
+.tag { display: inline-block; background: #0b0d12; border: 1px solid var(--border); padding: 0.15rem 0.5rem; border-radius: 999px; font-size: 0.85rem; margin-right: 0.4rem; color: var(--muted); transition: transform 120ms ease, border-color 120ms ease; }
+.tag:hover { transform: translateY(-1px); border-color: #2a3344; }
+.tag.status { color: var(--accent); border-color: #28452f; background: #0e1a12; }
+
+/* Project content + gallery */
+.project .content { margin-top: 1rem; }
+.gallery { margin-top: 1.5rem; }
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.75rem; }
+.gallery-grid img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; border: 1px solid var(--border); background: rgba(11,13,18,0.5); transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease; }
+.gallery-grid img:hover { transform: translateY(-2px) scale(1.01); box-shadow: var(--shadow); border-color: #2a3344; }
+figure { margin: 0; }
+figcaption { font-size: 0.9rem; color: var(--muted); margin-top: 0.25rem; }
+
+/* Footer socials */
+.socials { display: flex; gap: 0.75rem; align-items: center; }
+.social-link { display: inline-flex; gap: 0.4rem; align-items: center; color: var(--text); padding: 0.35rem 0.6rem; border-radius: 999px; border: 1px solid transparent; transition: background-color 140ms ease, border-color 140ms ease, transform 140ms ease; }
+.social-link:hover { background: rgba(255,255,255,0.05); border-color: #2a3344; transform: translateY(-1px); }
+.social-link .icon { display: inline-block; width: 20px; height: 20px; }
+
+/* Focus styles */
+a:focus, button:focus, .social-link:focus { outline: 2px solid #3c69ff; outline-offset: 2px; border-radius: 8px; }
+
+/* Reduced motion preference for all UI */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* Responsive tweaks */
+@media (max-width: 520px) {
+  .container { margin: 1.5rem auto 2rem; }
+  .hero { padding: 2rem 0.9rem; }
+  .card img { height: 140px; }
+  .gallery-grid img { height: 160px; }
+}
