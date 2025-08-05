@@ -4,26 +4,20 @@ title: MyAvitoHost
 subtitle: LLM-powered Chatbot for Rental Property Management Automation
 # date: 2024-05-20
 featured: true
-tech: ["Python", "Ollama", "LLMs (Llama, Mistral)", "FastMCP", "Telegram Bot API", "RAG (custom)", "Text Processing", "Automation", "Microservices"]
+tech: ["Python", "Ollama", "LLMs", "FastMCP", "Telegram Bot API", "RAG (custom)", "Text Processing", "Automation", "Microservices"]
 role: Lead Developer
 status: Functional Prototype
-cover: /assets/images/myavitohost/cover.png # Убедись, что путь к изображению обложки верный
+cover: /assets/images/myavitohost/cover.png
 images:
-  - src: /assets/images/myavitohost/architecture_diagram.png # Сгенерированное изображение Mermaid-диаграммы
-    alt: Smart Rental Assistant System Architecture
+  - src: /assets/images/myavitohost/architecture_diagram.png
+    alt: MyAvitoHost System Architecture
     caption: Диаграмма архитектуры системы, демонстрирующая взаимодействие LLM, FastMCP и Telegram-бота.
-links: # Блок links останется пустым, чтобы не выводить секцию "Links"
+links:
 ---
 
 ## Description
 
 **MyAvitoHost** — это прототип интеллектуальной системы автоматизации для посуточной аренды квартир. Проект демонстрирует, как локальные большие языковые модели (LLM) могут быть интегрированы с внешними инструментами и мессенджерами для автоматизации рутинных коммуникационных задач. Ключевая особенность — акцент на **конфиденциальности данных** за счет использования полностью локальных LLM и инфраструктуры.
-
-### System Architecture Overview
-
-Для наглядности взаимодействия компонентов, ниже представлена диаграмма архитектуры системы:
-
-## ![MyAvitoHost Architecture](/assets/images/myavitohost/architecture_diagram.png)
 
 ### Key Technologies & Functionality
 

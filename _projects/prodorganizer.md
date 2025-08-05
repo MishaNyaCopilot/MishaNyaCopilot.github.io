@@ -2,7 +2,7 @@
 layout: project
 title: ProdOrganizer
 subtitle: Android Productivity Organizer App with MVVM and Gamification
-date: 2024-03-15
+# date: 2024-03-15
 tech: ["Kotlin", "Jetpack Compose", "Android", "MVVM", "Room Database", "Hilt (DI)", "Supabase Auth", "WorkManager", "Gamification", "Analytics", "Pomodoro Timer"]
 role: Lead Developer (Academic Project)
 status: Completed (Academic Project)
