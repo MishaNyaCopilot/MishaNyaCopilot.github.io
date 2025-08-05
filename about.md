@@ -24,7 +24,7 @@ permalink: /about/
 **Backend & Cloud-Native Technologies:**
 *   **Microservices Architecture:** **Advanced** (Проектирование и реализация распределенных систем).
 *   **Databases:** **Advanced** (PostgreSQL, SQLite - дизайн схем, оптимизация запросов, работа с ORM GORM/Room).
-*   **Messaging Queues:** **Advanced** (RabbitMQ - асинхронная обработка задач, межсервисное взаимодействие).
+*   **Messaging Queues:** **Advanced** (Redis, RabbitMQ - асинхронная обработка задач, межсервисное взаимодействие).
 *   **Object Storage:** **Advanced** (MinIO S3-compatible - хранение медиа, интеграция с сервисами).
 *   **Containerization:** **Advanced** (Docker, Docker Compose - контейнеризация, оркестрация, деплой).
 *   **Frameworks (Backend):** Gin (Go), FastAPI (Python).
