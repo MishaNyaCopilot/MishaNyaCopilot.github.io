@@ -12,3 +12,5 @@ _site/
 
 # Node (if ever used locally)
 node_modules/
+
+.history
