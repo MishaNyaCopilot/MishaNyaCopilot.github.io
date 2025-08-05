@@ -2,7 +2,7 @@
 layout: project
 title: Наймер
 subtitle: Mobile Ad Platform (Android) with Supabase Integration
-date: 2023-12-01
+# date: 2023-12-01
 tech: ["Kotlin", "Jetpack Compose", "Android", "Supabase (Auth, Postgrest, Storage)", "Google Maps API"]
 role: Mobile Developer
 status: Completed (Academic Project)

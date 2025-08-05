@@ -2,7 +2,7 @@
 layout: project
 title: WhisperTranscriberBot
 subtitle: AI Telegram Bot for Voice-to-Text Transcription with Monetization and Monitoring
-date: 2024-06-01
+# date: 2024-06-01
 featured: true
 tech: ["Python", "Telegram API", "FastAPI", "PostgreSQL", "Redis", "Docker", "Streamlit", "Whisper AI", "Microservices"]
 role: Full-Stack Developer

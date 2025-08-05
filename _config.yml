@@ -1,7 +1,7 @@
 title: MishaNya
-description: Full-Stack Developer | Go, Python, Microservices, and AI-Powered Solutions.
-baseurl: "" # e.g. "/portfolio" if using project pages
-url: "https://MishaNyaCopilot.github.io" # replace with your username
+description: Software Engineer | Python Specialist | Building Scalable Backends, Mobile Apps & AI-Powered Solutions.
+baseurl: ""
+url: "https://MishaNyaCopilot.github.io"
 theme: null
 markdown: kramdown
 kramdown:

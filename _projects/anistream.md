@@ -2,7 +2,7 @@
 layout: project
 title: AniStream
 subtitle: Go-based Video Streaming Platform with Transcoding and Object Storage
-date: 2025-07-20
+# date: 2025-07-20
 tech: ["Go", "PostgreSQL", "MinIO", "RabbitMQ", "FFmpeg", "React", "Microservices", "Docker"]
 role: Full-Stack Developer
 status: In Development
