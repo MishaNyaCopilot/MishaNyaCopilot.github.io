@@ -6,30 +6,30 @@ date: 2023-12-01
 tech: ["Kotlin", "Jetpack Compose", "Android", "Supabase (Auth, Postgrest, Storage)", "Google Maps API"]
 role: Mobile Developer
 status: Completed (Academic Project)
-cover: /assets/images/naymer5/cover.png # Убедись, что путь к изображению обложки верный
+cover: /assets/images/naymer/cover.png # Убедись, что путь к изображению обложки верный
 images:
-  - src: /assets/images/naymer5/main.png # Скриншот главного экрана со списком объявлений
+  - src: /assets/images/naymer/main.png # Скриншот главного экрана со списком объявлений
     alt: Main Screen with Ad Listings
     caption: Главный экран приложения, отображающий список актуальных объявлений.
-  - src: /assets/images/naymer5/map_view.png # Скриншот поиска объявлений на карте
+  - src: /assets/images/naymer/map_view.png # Скриншот поиска объявлений на карте
     alt: Map View of Ads
     caption: Поиск и отображение объявлений на интерактивной карте.
-  - src: /assets/images/naymer5/filters.png # Скриншот фильтра объявлений
+  - src: /assets/images/naymer/filters.png # Скриншот фильтра объявлений
     alt: Ad Filtering Options
     caption: Модальное окно с параметрами фильтрации объявлений (категории, цена, сортировка).
-  - src: /assets/images/naymer5/hot.png # Скриншот горячих объявлений
+  - src: /assets/images/naymer/hot.png # Скриншот горячих объявлений
     alt: Hot Ads Screen
     caption: Раздел "Горячие объявления" с актуальными временными предложениями.
-  - src: /assets/images/naymer5/post.png # Скриншот детальной страницы объявления
+  - src: /assets/images/naymer/post.png # Скриншот детальной страницы объявления
     alt: Ad Detail Page
     caption: Детальная страница выбранного объявления с описанием, ценами и отзывами.
-  - src: /assets/images/naymer5/creation.png # Скриншот формы создания объявления
+  - src: /assets/images/naymer/creation.png # Скриншот формы создания объявления
     alt: Create New Ad Form
     caption: Форма для создания нового объявления, включая ввод данных и выбор местоположения.
-  - src: /assets/images/naymer5/profile.png # Скриншот профиля пользователя
+  - src: /assets/images/naymer/profile.png # Скриншот профиля пользователя
     alt: User Profile Screen
     caption: Профиль пользователя с возможностью просмотра личных данных и управления объявлениями.
-  - src: /assets/images/naymer5/moderation.png # Скриншот модерации
+  - src: /assets/images/naymer/moderation.png # Скриншот модерации
     alt: Moderation Panel
     caption: Панель модерации для проверки новых объявлений и управления отзывами.
 links: # Блок links останется пустым, чтобы не выводить секцию "Links"
