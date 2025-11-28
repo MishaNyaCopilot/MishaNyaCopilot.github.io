@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MishaNya - Personal Website</title>
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="src/theme/dark.css" id="theme-style">
+</head>
+
+<body>
+    <div id="site-loader" class="loader" aria-hidden="true">
+        <div class="loader__canvas">
+            <div class="loader__core"></div>
+            <div class="loader__halo loader__halo--one"></div>
+            <div class="loader__halo loader__halo--two"></div>
+            <div class="loader__halo loader__halo--three"></div>
+            <div class="loader__particle loader__particle--one"></div>
+            <div class="loader__particle loader__particle--two"></div>
+            <div class="loader__particle loader__particle--three"></div>
+        </div>
+        <p class="loader__caption heat-text">Initializing evidence trail</p>
+        <span class="sr-only">Loading portfolio...</span>
+    </div>
+    <header class="site-header" data-glass>
+        <div class="site-header__inner">
+            <a class="brand" href="#home" aria-label="Navigate to home">
+                <svg class="brand__logo" width="36" height="36" viewBox="0 0 64 64" aria-hidden="true"
+                    focusable="false">
+                    <defs>
+                        <linearGradient id="brandGradient" x1="12%" y1="8%" x2="88%" y2="92%">
+                            <stop offset="0%" stop-color="#6C63FF" />
+                            <stop offset="48%" stop-color="#4C95FF" />
+                            <stop offset="100%" stop-color="#7FFFD4" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="32" cy="32" r="30" fill="url(#brandGradient)" opacity="0.92" />
+                    <path d="M18 24l13 20 15-32" fill="none" stroke="#0A0A0F" stroke-width="4" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M21 44h22" stroke="#0A0A0F" stroke-width="3.5" stroke-linecap="round" />
+                </svg>
+                <span class="sr-only">MishaNya</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="nav-toggle__line"></span>
+                <span class="nav-toggle__line"></span>
+                <span class="nav-toggle__line"></span>
+            </button>
+            <nav id="primary-navigation" class="site-nav" aria-label="Primary">
+                <ul class="site-nav__list">
+                    <li>
+                        <a href="#home" class="site-nav__link">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="site-nav__icon"
+                                viewBox="0 0 16 16" focusable="false">
+                                <path
+                                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z" />
+                                <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z" />
+                            </svg>
+                            <span class="site-nav__label">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#projects" class="site-nav__link">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="site-nav__icon"
+                                viewBox="0 0 16 16" focusable="false">
+                                <path
+                                    d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5" />
+                            </svg>
+                            <span class="site-nav__label">Projects</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#education" class="site-nav__link">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="site-nav__icon"
+                                viewBox="0 0 16 16" focusable="false">
+                                <path
+                                    d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917z" />
+                                <path
+                                    d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466z" />
+                            </svg>
+                            <span class="site-nav__label">Education</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about" class="site-nav__link">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="site-nav__icon"
+                                viewBox="0 0 16 16" focusable="false">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                                <path fill-rule="evenodd"
+                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                            </svg>
+                            <span class="site-nav__label">About</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="site-nav__link">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="site-nav__icon"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1z" />
+                            </svg>
+                            <span class="site-nav__label">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="section hero" aria-labelledby="home-heading">
+            <div class="hero__content" data-glass>
+                <div class="hero__text">
+                    <p class="hero__eyebrow">Software Engineer</p>
+                    <h1 id="home-heading" class="heat-text">MishaNya</h1>
+                    <p class="hero__subheading heat-text">Developing high-performance, scalable and intelligent systems.</p>
+                    <p class="hero__summary">
+                        My experience covers the full application development cycle, from backend architecture design to creating functional user interfaces and integrating AI-based solutions.
+                    </p>
+                    <ul class="hero__meta">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="bi bi-person-workspace" viewBox="0 0 16 16">
+                                <path
+                                    d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
+                                <path
+                                    d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.4 5.4 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2z" />
+                            </svg>
+                            <span>Backend, AI/ML, Mobile</span>
+                        </li>
+                    </ul>
+                    <div class="hero__actions">
+                        <div class="hero__links">
+                            <a href="https://github.com/MishaNyaCopilot" target="_blank" rel="noopener">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                    class="bi bi-github" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                                </svg>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://t.me/MishaNyaIsTaken" target="_blank" rel="noopener">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                    class="bi bi-telegram" viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z" />
+                                </svg>
+                                <span>Telegram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="projects" class="section projects" aria-labelledby="projects-heading">
+            <div class="section__header">
+                <h2 id="projects-heading" class="heat-text">Featured Projects</h2>
+                <p>Investigations, automation tooling, and research that blend forensic rigor with engineering.</p>
+            </div>
+            <div class="projects__grid" data-project-grid>
+                <!-- Project cards injected from JSON -->
+            </div>
+        </section>
+
+        <section id="freelance-projects" class="section projects" aria-labelledby="freelance-projects-heading">
+            <div class="section__header">
+                <h2 id="freelance-projects-heading" class="heat-text">Freelance Projects</h2>
+                <p>A selection of projects delivered for clients, showcasing my experience in various domains.</p>
+            </div>
+            <div class="projects__grid" data-freelance-project-grid>
+                <!-- Freelance project cards injected from JSON -->
+            </div>
+        </section>
+
+
+
+        <section id="education" class="section education" aria-labelledby="education-heading">
+            <div class="section__header">
+                <h2 id="education-heading" class="heat-text">Education</h2>
+                <p>Academic foundation in Software Engineering.</p>
+            </div>
+            <div class="timeline timeline--compact" data-glass>
+                <article class="timeline__item">
+                    <div class="timeline__meta">
+                        <span class="timeline__date">2020 &ndash; 2024</span>
+                        <span class="timeline__location">Yoshkar-Ola, Russia</span>
+                    </div>
+                    <div class="timeline__content">
+                        <h3>Bachelor of Software Engineering</h3>
+                        <p>Volga State University of Technology &middot; Faculty of Informatics and Computer Engineering</p>
+                        <ul>
+                            <li>Specialization in the development of high-performance and scalable systems.</li>
+                            <li>Study of modern software development methodologies and architectural patterns.</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="about" class="section about" aria-labelledby="about-heading">
+    <div class="section__header">
+        <h2 id="about-heading" class="heat-text">About Me</h2>
+        <p>Software Engineer with a deep interest in developing high-performance, scalable and intelligent systems.</p>
+    </div>
+    <div class="about__content" data-glass>
+        <p>
+            Hello! I am <strong>MishaNya</strong>, a Software Engineer with a deep interest in developing high-performance, scalable and intelligent systems. My experience covers the full application development cycle, from backend architecture design to creating functional user interfaces and integrating AI-based solutions.
+        </p>
+        <p>
+            I constantly strive for professional growth, master new technologies and apply best practices, paying special attention to reliability, efficiency and code modularity. My development approach is focused on solving real problems and creating value for the end user.
+        </p>
+        <div class="about__highlights">
+            <article>
+                <h3>Languages & Core Development</h3>
+                <p><strong>Python:</strong> Expert (Backend development, microservices, working with LLM, automation, data processing).</p>
+                <p><strong>Kotlin:</strong> Intermediate (Native Android development, Jetpack Compose, MVVM, local DB, background tasks).</p>
+                <p><strong>Go (Golang):</strong> Beginner/Learning (Studying and actively applying for creating high-performance services, microservice architecture).</p>
+                <p><strong>JavaScript (ES6+):</strong> Intermediate (Functional frontend on React).</p>
+                <p><strong>HTML5/CSS3:</strong> Intermediate (Basic web development, UI styling).</p>
+            </article>
+            <article>
+                <h3>Backend & Cloud-Native Technologies</h3>
+                <p><strong>Microservices Architecture:</strong> Advanced (Designing and implementing distributed systems).</p>
+                <p><strong>Databases:</strong> Advanced (PostgreSQL, SQLite - schema design, query optimization, working with ORM GORM/Room).</p>
+                <p><strong>Messaging Queues:</strong> Advanced (Redis, RabbitMQ - asynchronous task processing, inter-service communication).</p>
+                <p><strong>Object Storage:</strong> Advanced (MinIO S3-compatible - media storage, integration with services).</p>
+                <p><strong>Containerization:</strong> Advanced (Docker, Docker Compose - containerization, orchestration, deployment).</p>
+                <p><strong>Frameworks (Backend):</strong> FastAPI (Python).</p>
+                <p><strong>Video Processing:</strong> FFmpeg (Transcoding, working with media files).</p>
+                <p><strong>Cloud Platforms:</strong> Supabase (Auth, Postgrest, Storage - Backend-as-a-Service).</p>
+            </article>
+            <article>
+                <h3>AI/ML & Automation</h3>
+                <p><strong>Large Language Models (LLMs):</strong> Advanced (Working with local LLM - Ollama, LM Studio, fine-tuning).</p>
+                <p><strong>RAG (Retrieval-Augmented Generation):</strong> Advanced (Developing RAG mechanisms for enriching LLM context).</p>
+                <p><strong>Speech-to-Text:</strong> Whisper AI, Faster-Whisper (Integrating models for audio transcription).</p>
+                <p><strong>Automation:</strong> Developing systems for automating communication and business processes.</p>
+                <p><strong>Model Deployment:</strong> Integration of local and API-based LLMs into production environments (Ollama, OpenAI-compatible APIs).</p>
+                <p><strong>Vector Databases:</strong> Qdrant (semantic search, embeddings storage, hybrid retrieval).</p>
+                <p><strong>Pipeline Orchestration:</strong> Async pipelines for audio → text → LLM response workflows.</p>
+            </article>
+            <article>
+                <h3>Frontend & UI (Mobile/Web)</h3>
+                <p><strong>React:</strong> Intermediate (Creating functional web interfaces).</p>
+                <p><strong>Jetpack Compose:</strong> Intermediate (Building native Android UI).</p>
+                <p><strong>Tools:</strong> Vite, Tailwind CSS.</p>
+                <p><strong>Data Visualization:</strong> Streamlit (Creating analytical dashboards).</p>
+            </article>
+            <article>
+                <h3>Tools & Practices</h3>
+                <p><strong>Version Control:</strong> Git, GitHub.</p>
+                <p><strong>Software Design Patterns:</strong> MVVM, Observer, Singleton, Factory.</p>
+                <p><strong>Testing:</strong> Unit Testing (basics), Integration Testing (understanding).</p>
+                <p><strong>Debugging & Troubleshooting:</strong> Effective debugging of distributed systems.</p>
+                <p><strong>System Monitoring:</strong> Designing and implementing performance monitoring systems.</p>
+                <p><strong>Clean Code & Refactoring:</strong> Striving for clean and maintainable code.</p>
+                <p><strong>Project Architecture Documentation:</strong> Maintaining system diagrams, README, and deployment docs for distributed projects.</p>
+            </article>
+            <article>
+                <h3>Soft / Meta Skills</h3>
+                <p><strong>Problem Solving:</strong> Focused on pragmatic solutions that balance performance, maintainability and business value.</p>
+                <p><strong>Technical Writing:</strong> Creating concise documentation and architecture summaries for developer onboarding and project continuity.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+        <section id="contact" class="section contact" aria-labelledby="contact-heading">
+            <div class="section__header">
+                <h2 id="contact-heading" class="heat-text">Let's Collaborate</h2>
+                <p>Open to collaborations in high-performance systems, AI/ML, mobile development, and backend solutions.</p>
+            </div>
+            <div class="contact__layout" data-glass>
+
+                <div class="contact__aside">
+                    <div class="contact__intro">
+                        <p>
+                            Share your challenge, investigation, or automation goal and I will reply within two business
+                            days. I am
+                            currently based in Bengaluru and available for remote or hybrid engagements.
+                        </p>
+                    </div>
+                    <ul class="contact__links">
+                        <li>
+                            <a href="mailto:kholodm07@gmail.com">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671" />
+                                    <path
+                                        d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791" />
+                                </svg>
+                                <span>Email</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/hirparaviren" target="_blank" rel="noopener">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-linkedin" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                                </svg>
+                                <span>LinkedIn</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/MishaNyaCopilot" target="_blank" rel="noopener">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-github" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                                </svg>
+                                <span>GitHub</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://t.me/MishaNyaIsTaken" target="_blank" rel="noopener">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-telegram" viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z" />
+                                </svg>
+                                <span>Telegram</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="contact__details">
+                        <div>
+                            <span class="contact__label">Availability</span>
+                            <span>Remote</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span data-current-year></span> MishaNya. Crafted with</p>
+        <span class="heart">
+            ❤️
+        </span>
+        <p>by me.</p>
+    </footer>
+
+    <script src="src/script.js" type="module"></script>
+</body>
+
+</html>

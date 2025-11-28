@@ -1,0 +1,23 @@
+{
+    "name": "personal-website",
+    "version": "1.0.0",
+    "description": "A modern personal website with dark and light mode features.",
+    "main": "index.html",
+    "scripts": {
+        "sync": "browser-sync start --server \".\" --files \"**/*\" --no-notify --port 5173 --browser \"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --startPath index.html"
+    },
+    "keywords": [
+        "personal",
+        "website",
+        "portfolio",
+        "react",
+        "dark-mode",
+        "light-mode"
+    ],
+    "author": "Viren Hirpara",
+    "license": "MIT",
+    "homepage": "https://viru185.github.io",
+    "devDependencies": {
+        "browser-sync": "^3.0.4"
+    }
+}

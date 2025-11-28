@@ -1,0 +1,63 @@
+[
+    {
+        "name": "AniStream",
+        "description": "Go-based Video Streaming Platform with Transcoding and Object Storage",
+        "tech": ["Go", "React", "MinIO", "RabbitMQ", "FFmpeg", "PostgreSQL", "hls.js"],
+        "source": "https://github.com/MishaNyaCopilot/glowing-octo-chainsaw",
+        "deployment": "",
+        "visibility": "public",
+        "image": null,
+        "tags": ["Backend", "Streaming", "Go", "Microservices"]
+    },
+    {
+        "name": "IntellectHub",
+        "description": "Web application for chatting with AI supporting various models via OpenRouter API.",
+        "tech": ["TypeScript", "NestJS", "Node.js", "PostgreSQL", "TypeORM", "JWT", "React", "Next.js", "Shadcn UI"],
+        "source": "https://github.com/MishaNyaCopilot/IntellectHub",
+        "deployment": "",
+        "visibility": "public",
+        "image": null,
+        "tags": ["Full-Stack", "AI", "TypeScript", "Web App"]
+    },
+    {
+        "name": "WhisperTranscriberBot",
+        "description": "Telegram bot for converting voice messages to text using Whisper AI.",
+        "tech": ["Python", "Telegram API", "Whisper AI", "RabbitMQ", "PostgreSQL", "Redis", "Prometheus", "Grafana"],
+        "source": "",
+        "deployment": "https://t.me/WhisperTranscriber_bot",
+        "deploymentLabel": "Telegram Bot",
+        "visibility": "private",
+        "image": null,
+        "tags": ["Telegram Bot", "AI", "Python", "Microservices"]
+    },
+    {
+        "name": "MyAvitoHost",
+        "description": "Telegram bot with AI for automating rental property processes.",
+        "tech": ["Python", "LLM", "Ollama", "LM Studio", "FastMCP", "Telegram API"],
+        "source": "https://github.com/MishaNyaCopilot/MyAvitoHost",
+        "deployment": "",
+        "visibility": "public",
+        "image": null,
+        "tags": ["Telegram Bot", "AI", "Python", "Automation"]
+    },
+    {
+        "name": "Naymer",
+        "description": "Android app for posting and searching ads with map.",
+        "tech": ["Kotlin", "Jetpack Compose", "Supabase", "Google Maps API"],
+        "source": "https://github.com/MishaNyaCopilot/Naymer",
+        "deployment": "",
+        "visibility": "public",
+        "image": null,
+        "tags": ["Android", "Mobile", "Kotlin"]
+    },
+    {
+        "name": "ProdOrganizer",
+        "description": "App for managing tasks, habits, and Pomodoro timer.",
+        "tech": ["Kotlin", "Jetpack Compose", "MVVM", "Room", "Hilt", "Supabase", "WorkManager"],
+        "source": "https://github.com/MishaNyaCopilot/ProductivityOrganizer",
+        "deployment": "",
+        "visibility": "public",
+        "image": null,
+        "tags": ["Android", "Mobile", "Kotlin", "Productivity"]
+    }
+]
