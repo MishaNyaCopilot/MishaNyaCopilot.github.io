@@ -1,5 +1,25 @@
 [
     {
+        "name": "Terraform AWS Infrastructure",
+        "description": "A production-ready multi-tier web application infrastructure built with Terraform, demonstrating enterprise-grade cloud architecture patterns on AWS.",
+        "tech": ["Terraform", "AWS", "LocalStack", "Docker", "PostgreSQL", "S3", "CloudWatch", "EC2"],
+        "source": "https://github.com/MishaNyaCopilot/learn-aws-terraform",
+        "deployment": "",
+        "visibility": "public",
+        "image": null,
+        "tags": ["IaC", "Terraform", "AWS", "DevOps", "Cloud"]
+    },
+    {
+        "name": "Image Processing Service (K8s)",
+        "description": "A production-ready microservices application for asynchronous image processing, designed as a comprehensive Kubernetes learning project demonstrating enterprise-grade patterns.",
+        "tech": ["Kubernetes", "Docker", "FastAPI", "Python", "RabbitMQ", "PostgreSQL", "MinIO", "Prometheus", "Grafana"],
+        "source": "https://github.com/MishaNyaCopilot/learn-k8s",
+        "deployment": "",
+        "visibility": "public",
+        "image": null,
+        "tags": ["IaC", "Kubernetes", "Microservices", "DevOps", "Python"]
+    },
+    {
         "name": "AniStream",
         "description": "Go-based Video Streaming Platform with Transcoding and Object Storage",
         "tech": ["Go", "React", "MinIO", "RabbitMQ", "FFmpeg", "PostgreSQL", "hls.js"],
