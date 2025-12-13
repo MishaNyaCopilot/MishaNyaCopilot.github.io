@@ -43,10 +43,10 @@
         "name": "WhisperTranscriberBot",
         "description": "Telegram bot for converting voice messages to text using Whisper AI.",
         "tech": ["Python", "Telegram API", "Whisper AI", "RabbitMQ", "PostgreSQL", "Redis", "Prometheus", "Grafana"],
-        "source": "",
+        "source": "https://github.com/MishaNyaCopilot/WhisperTranscriberBotREADME",
         "deployment": "https://t.me/WhisperTranscriber_bot",
         "deploymentLabel": "Telegram Bot",
-        "visibility": "private",
+        "visibility": "public",
         "image": null,
         "tags": ["Telegram Bot", "AI", "Python", "Microservices"]
     },
