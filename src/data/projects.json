@@ -1,5 +1,15 @@
 [
     {
+        "name": "DocsScraper",
+        "description": "Production-ready system for the full lifecycle of technical documentation processing: Scraping → LLM-Cleaning → Vectorization, to create high-quality RAG datasets for AI assistants.",
+        "tech": ["Python", "LLM", "Qdrant", "Firecrawl", "Streamlit", "LangGraph", "SQLite", "Docker"],
+        "source": "https://github.com/MishaNyaCopilot/DocsScraper",
+        "deployment": "",
+        "visibility": "public",
+        "image": null,
+        "tags": ["AI", "RAG", "LLM", "Scraping", "Python", "Data Processing"]
+    },
+    {
         "name": "Terraform AWS Infrastructure",
         "description": "A production-ready multi-tier web application infrastructure built with Terraform, demonstrating enterprise-grade cloud architecture patterns on AWS.",
         "tech": ["Terraform", "AWS", "LocalStack", "Docker", "PostgreSQL", "S3", "CloudWatch", "EC2"],
