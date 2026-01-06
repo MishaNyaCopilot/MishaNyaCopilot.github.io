@@ -464,7 +464,7 @@ const renderFreelanceProjects = async () => {
 
     try {
         await loadTechIcons();
-        const response = await fetch("src/data/freelance-projects.json");
+        const response = await fetch("src/data/commercial-projects.json");
         if (!response.ok) {
             throw new Error(`Failed to load freelance projects: ${response.statusText}`);
         }
